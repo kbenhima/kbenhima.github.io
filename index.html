@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenza Benhima — Personal Website</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #dbe3ee;
+      --accent: #1f5fae;
+      --accent-soft: #eaf2fc;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .layout {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: 100vh;
+    }
+
+    aside {
+      background: #eef3f9;
+      border-right: 1px solid var(--line);
+      padding: 28px 20px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      align-self: start;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 0 0 24px;
+      line-height: 1.15;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li + li { margin-top: 8px; }
+
+    nav a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      color: var(--text);
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background: var(--accent-soft);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    main {
+      padding: 36px 34px 60px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 6px 18px rgba(20, 30, 50, 0.04);
+      margin-bottom: 24px;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      color: #24364f;
+    }
+
+    .home-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 12px;
+      background:
+        linear-gradient(135deg, #dbe7f5, #f7fafc);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-align: center;
+      padding: 18px;
+      font-size: 0.95rem;
+    }
+
+    .tagline {
+      color: var(--muted);
+      margin-top: -8px;
+      margin-bottom: 18px;
+    }
+
+    ul.clean {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .paper-list,
+    .media-list,
+    .conference-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .item {
+      padding: 14px 16px;
+      background: #fbfdff;
+      border: 1px solid #e6edf6;
+      border-radius: 10px;
+    }
+
+    .item-title {
+      font-weight: bold;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding-top: 8px;
+    }
+
+    @media (max-width: 860px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .home-grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="site-title">Kenza Benhima</div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#conferences">Conferences</a></li>
+          <li><a href="#media">Media</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="home">
+        <h1>Kenza Benhima</h1>
+        <div class="home-grid">
+          <div class="portrait">
+            Portrait / photo placeholder<br>
+            (replace with your own image)
+          </div>
+          <div>
+            <p class="tagline">Professor at HEC-Lausanne (University of Lausanne)</p>
+            <p>Co-chair of the Department of Economics</p>
+            <p>Member of the SNF Evaluation Panel for Individual Research Projects</p>
+            <p>CEPR Fellow</p>
+            <p>Associate editor at the European Economic Review</p>
+            <p><strong>Research interests:</strong> International finance, Macro Finance, Imperfect Information</p>
+            <p><a href="https://www.dropbox.com/" target="_blank" rel="noopener">CV</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts">
+        <h2>Contacts</h2>
+        <p><strong>E-mail:</strong> kenza.benhima[at]unil.ch</p>
+        <p><strong>Office:</strong> +41-021.692.36.92</p>
+        <p><strong>Work Address:</strong><br>
+          Université de Lausanne<br>
+          Quartier UNIL-Dorigny<br>
+          Bâtiment Internef<br>
+          1015 Lausanne
+        </p>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+
+        <h3>Work in progress</h3>
+        <div class="paper-list">
+          <div class="item">
+            <div class="item-title">Trade Credit and Firms' Financial Vulnerability</div>
+            <div class="muted">with Omar Chafik, Sophie Osotimehin, Abdessamad Saidi and Wenxia Tang</div>
+          </div>
+          <div class="item">
+            <div class="item-title">The Effect of Public Debt on the Convenience Yield: Evidence from Swiss Treasury Auctions</div>
+            <div class="muted">with Maxime Phillot</div>
+          </div>
+          <div class="item">
+            <div class="item-title"><a href="https://www.dropbox.com/" target="_blank" rel="noopener">Granular Expectation Shocks and International Financial Contagion</a></div>
+            <div class="muted">with Elio Bolliger and Margaret Davenport</div>
+          </div>
+        </div>
+
+        <h3>Completed papers</h3>
+        <div class="paper-list">
+          <div class="item">
+            <div class="item-title"><a href="https://www.dropbox.com/" target="_blank" rel="noopener">Foreign Exchange Interventions with UIP and CIP deviations: The Case of Small Safe Haven Economies</a></div>
+            <div class="muted">2025, with Philippe Bacchetta and Brendan Berthold, R&amp;R Review of Economic Studies</div>
+            <div>Foreign exchange interventions entail a net risk-adjusted benefit to small safe haven economies because foreign intermediaries value the safe haven property of the domestic currency more than domestic households.</div>
+          </div>
+          <div class="item">
+            <div class="item-title"><a href="https://www.dropbox.com/" target="_blank" rel="noopener">Short-term Finance, Long-term Effects</a></div>
+            <div class="muted">2024, with Omar Chafik, Min Fang and Wenxia Tang, R&amp;R JPE: Macro</div>
+            <div>We calibrate a heterogeneous-firm model of short-term loan guarantees using Moroccan data. The gains from expanding the program by lowering entry costs or increasing the guaranteed ratio are substantial.</div>
+          </div>
+          <div class="item">
+            <div class="item-title"><a href="https://www.dropbox.com/" target="_blank" rel="noopener">The International Transmission of Asset Market Shocks in Liquidity Traps</a></div>
+            <div class="muted">2024, with Philippe Bacchetta, Yannick Kalantzis and Maxime Phillot, R&amp;R Journal of International Economics</div>
+            <div>A decrease in the supply of assets issued abroad or an increase in the demand for assets leads to an asset shortage domestically. In normal times, the nominal interest rate decreases, stimulating investment and output. In a liquidity trap, deflation hits instead and the currency appreciates, causing a recession.</div>
+          </div>
+        </div>
+
+        <h3>Publications</h3>
+        <div class="paper-list">
+          <div class="item"><div class="item-title"><a href="https://www.dropbox.com/" target="_blank" rel="noopener">Do Local Forecasters Have Better Information?</a></div><div class="muted">2025, with Elio Bolliger, accepted Review of Economics and Statistics</div></div>
+          <div class="item"><div class="item-title"><a href="https://www.dropbox.com/" target="_blank" rel="noopener">Foreign Currency Debt and Disagreement</a></div><div class="muted">2025, with Isabella Blengini and Ouarda Merrouche, accepted Economic Journal</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">News, Sentiments and Capital Flows</a></div><div class="muted">with Rachel Cordonier, Journal of International Economics, 2022</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">Understanding Swiss Real Interest Rates in a Financially Globalized World</a></div><div class="muted">2022, with Philippe Bacchetta and Jean-Paul Renne</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">Does Demand Noise Matter? Identification and Implications</a></div><div class="muted">2021, with Céline Poilly</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">Money and Capital in a Persistent Liquidity Trap</a></div><div class="muted">2020, with Philippe Bacchetta and Yannick Kalantzis</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">Optimal Monetary Policy when Information is Market-Generated</a></div><div class="muted">2019, with Isabella Blengini</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">Booms and Busts with Dispersed Information</a></div><div class="muted">2019</div></div>
+          <div class="item"><div class="item-title"><a href="https://www.aeaweb.org/" target="_blank" rel="noopener">Corporate Cash and Employment</a></div><div class="muted">2018, with Philippe Bacchetta and Céline Poilly</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">The Demand for Liquid Assets, Corporate Saving, and International Capital Flows</a></div><div class="muted">2015, with Philippe Bacchetta</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">Optimal Exchange Rate Policy in a Growing Semi-Open Economy</a></div><div class="muted">2014, with Philippe Bacchetta and Yannick Kalantzis</div></div>
+          <div class="item"><div class="item-title"><a href="https://www.aeaweb.org/" target="_blank" rel="noopener">Safety Traps</a></div><div class="muted">2013, with Baptiste Massenot</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">A Reappraisal of the Allocation Puzzle through the Portfolio Approach</a></div><div class="muted">2013</div></div>
+          <div class="item"><div class="item-title"><a href="https://www.aeaweb.org/" target="_blank" rel="noopener">Capital Controls with International Reserve Accumulation: Can this Be Optimal?</a></div><div class="muted">2013, with Philippe Bacchetta and Yannick Kalantzis</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">Financial Integration, Capital Misallocation and Global Imbalances</a></div><div class="muted">2013</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">Exchange Rate Volatility and Productivity Growth: The Role of Liability Dollarization</a></div><div class="muted">2011</div></div>
+          <div class="item"><div class="item-title"><a href="https://doi.org/" target="_blank" rel="noopener">When Do Long-term Imbalances Lead to Current Account Reversals?</a></div><div class="muted">2010, with Olena Havrylchyk</div></div>
+          <div class="item"><div class="item-title">Déséquilibres Globaux et Croissance des Pays Emergents dans une Economie Mondiale</div><div class="muted">2009, La Revue Economique</div></div>
+          <div class="item"><div class="item-title"><a href="https://cepii.fr/" target="_blank" rel="noopener">Déficits courants des PECO : comment évaluer les risques de retournement ?</a></div><div class="muted">2006, with Olena Havrylchyk</div></div>
+        </div>
+
+        <h3>Book Chapters</h3>
+        <div class="item">
+          <div class="item-title"><a href="https://ideas.repec.org/" target="_blank" rel="noopener">Corporate Saving in Global Rebalancing</a></div>
+          <div class="muted">2013, with Philippe Bacchetta</div>
+        </div>
+
+        <h3>Other Writings</h3>
+        <div class="item">
+          <div class="item-title"><a href="https://e4s.center/" target="_blank" rel="noopener">Do Managers Care about Energy Prices?</a></div>
+          <div class="muted">2023, E4S Brief, with Andreas Fuester and Mikosch Heiner</div>
+        </div>
+      </section>
+
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <ul class="clean">
+          <li>The Identification of Structural Shocks (PhD in Economics - HEC), with Jean-Paul Renne</li>
+          <li>Economie Politique II (Bachelor in Economics - HEC)</li>
+          <li>Macro policy (MSc in Economics - HEC, 5.1)</li>
+          <li>Macroeconomics (MSc in Economics - HEC, 4.1)</li>
+          <li>Business cycles (MSc in Economics - HEC, 4.2)</li>
+        </ul>
+      </section>
+
+      <section id="conferences">
+        <h2>Conferences</h2>
+        <div class="conference-list">
+          <div class="item">
+            <div class="item-title">Workshop on New Advances on Information Frictions in Business Cycles</div>
+            <div>26–27 June 2017, Villars-sur-Ollon, Switzerland, jointly organized with Céline Poilly and Gaetano Gaballo, with support from the SNSF.</div>
+          </div>
+          <div class="item">
+            <div class="item-title">Workshop on Small Business, Development and Growth</div>
+            <div>3–4 October 2022, Rabat, Morocco, jointly organized with Vittorio Bassi, Romain Rancière and Abdessamad Saidi.</div>
+          </div>
+          <div class="item">
+            <div class="item-title">CEPR International Macro and Finance Annual Meeting 2025</div>
+            <div>16–17 October 2025, Lausanne, Switzerland, co-organized with Philippe Bacchetta, Gianluca Benigno, and Alberto Martin.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="media">
+        <h2>Media</h2>
+        <div class="media-list">
+          <div class="item"><a href="https://voxeu.org/" target="_blank" rel="noopener">VoxEU page</a></div>
+          <div class="item"><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn page</a></div>
+          <div class="item"><a href="https://entrepriseromande.ch/" target="_blank" rel="noopener">"Le but est de prospérer à l'intérieur des limites planétaires"</a> — L'Entreprise Romande, July 2025</div>
+          <div class="item"><a href="https://wp.unil.ch/" target="_blank" rel="noopener">"On a les clés pour affronter les défis planétaires"</a> — Uniscope, November 2024</div>
+          <div class="item"><a href="https://www.rts.ch/" target="_blank" rel="noopener">La décroissance : calamité ou opportunité ?</a> — Twist, RTS, March 2025</div>
+          <div class="item"><a href="https://www.rts.ch/" target="_blank" rel="noopener">Climat, ralentir ou périr ? Le débat autour de la décroissance bat son plein</a> — Géopolitis, RTS, December 2023</div>
+          <div class="item"><a href="https://wp.unil.ch/" target="_blank" rel="noopener">Comment l’asymétrie de l’information fait circuler les capitaux</a> — Allez Savoir!, February 2022</div>
+          <div class="item"><a href="https://lavieeconomique.ch/" target="_blank" rel="noopener">La Fin de l'Ilot Suisse des Taux d'Intérêt ?</a> — La Vie Economique, July 2021</div>
+          <div class="item"><a href="https://www.letemps.ch/" target="_blank" rel="noopener">La Taxe Carbone est-elle Juste ?</a> — Le Temps, June 2021</div>
+          <div class="item"><a href="https://agefi.com/" target="_blank" rel="noopener">Attention aux pièges du populisme et du repli sur soi</a> — L'AGEFI, June 2021</div>
+          <div class="item"><a href="https://wp.unil.ch/" target="_blank" rel="noopener">Peut-on prévoir l'avenir ?</a> — Les Mystères de l'Unil, 2021</div>
+        </div>
+      </section>
+
+      <footer>
+        Static HTML remake inspired by the original Google Sites page.
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
